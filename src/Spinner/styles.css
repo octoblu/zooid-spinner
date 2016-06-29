@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'CitrixIconFont';
+  src: url(https://workspace.tryworkspaces.com/navbar/styles/fonts/citrixicons.eot);
+  src: url(https://workspace.tryworkspaces.com/navbar/styles/fonts/citrixicons.eot?#iefix) format('eot'), url(https://workspace.tryworkspaces.com/navbar/styles/fonts/citrixicons.woff) format('woff'), url(https://workspace.tryworkspaces.com/navbar/styles/fonts/citrixicons.ttf) format('truetype'), url(https://workspace.tryworkspaces.com/navbar/styles/fonts/citrixicons.svg#CitrixIconFont) format('svg');
+}
+
+.spinner {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+.small {
+  composes: spinner;
+  font-size: 32px;
+}
+
+.regular {
+  composes: spinner;
+  font-size: 48px;
+}
+
+.large {
+  composes: spinner;
+  font-size: 96px;
+}
+
+
+.circle {
+  opacity: .4;
+}
+.circle:before {
+  content: "\e689";
+}
+.segment {
+  -webkit-animation: segment 0.8s infinite step-end;
+  -moz-animation: segment 0.8s infinite step-end;
+  -o-animation: segment 0.8s infinite step-end;
+  animation: segment 0.8s infinite step-end;
+  -webkit-transform-origin: 50% 51%;
+  -ms-transform-origin: 50% 51%;
+  -moz-transform-origin: 50% 51%;
+  -o-transform-origin: 50% 51%;
+  transform-origin: 50% 51%;
+}
+.segment:before {
+  content: "\e689a";
+}
+.circle,
+.segment {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: inherit;
+  font-family: 'CitrixIconFont';
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@-webkit-keyframes segment {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes segment {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
