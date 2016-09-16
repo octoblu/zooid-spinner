@@ -1,9 +1,12 @@
 # zooid-spinner
 
 [![Build Status](https://travis-ci.org/octoblu/zooid-spinner.svg?branch=master)](https://travis-ci.org/octoblu/zooid-spinner)
-[![npm version](https://badge.fury.io/js/zooid-spinner.svg)](http://badge.fury.io/js/zooid-spinner)
-[![Code Climate](https://codeclimate.com/github/octoblu/zooid-spinner.png)](https://codeclimate.com/github/octoblu/zooid-spinner)
+[![Test Coverage](https://codecov.io/gh/octoblu/zooid-spinner/branch/master/graph/badge.svg)](https://codecov.io/gh/octoblu/zooid-spinner)
+[![Dependency status](http://img.shields.io/david/octoblu/zooid-spinner.svg?style=flat)](https://david-dm.org/octoblu/zooid-spinner)
+[![devDependency Status](http://img.shields.io/david/dev/octoblu/zooid-spinner.svg?style=flat)](https://david-dm.org/octoblu/zooid-spinner#info=devDependencies)
 [![Slack Status](http://community-slack.octoblu.com/badge.svg)](http://community-slack.octoblu.com)
+
+[![NPM](https://nodei.co/npm/zooid-spinner.svg?style=flat)](https://npmjs.org/package/zooid-spinner)
 
 ## Install
 ```
