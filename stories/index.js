@@ -9,6 +9,7 @@ storiesOf('Spinner', module)
   ), { inline: true })
   .addWithInfo('Sizes', '', () => (
     <div>
+      <Spinner size="extra-small" />
       <Spinner size="small" />
       <Spinner size="regular" />
       <Spinner size="large" />

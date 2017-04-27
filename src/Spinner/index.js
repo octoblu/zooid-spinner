@@ -5,7 +5,7 @@ import styles from './styles.css'
 
 const propTypes = {
   className: PropTypes.string,
-  size: PropTypes.oneOf(['regular', 'small', 'large']),
+  size: PropTypes.oneOf(['regular', 'extra-small', 'small', 'large']),
 }
 
 const defaultProps = {

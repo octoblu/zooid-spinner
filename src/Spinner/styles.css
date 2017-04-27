@@ -12,6 +12,11 @@
   vertical-align: middle;
 }
 
+.extra-small {
+  composes: spinner;
+  font-size: 22px;
+}
+
 .small {
   composes: spinner;
   font-size: 32px;
