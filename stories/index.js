@@ -1,17 +1,13 @@
-import React from 'react'
-import { storiesOf } from '@kadira/storybook'
+import React from "react"
+import { storiesOf } from "@storybook/react"
 
-import Spinner from '../src'
+import Spinner from "../src"
 
-storiesOf('Spinner', module)
-  .addWithInfo('Basic', 'When no prop is specified', () => (
-    <Spinner />
-  ), { inline: true })
-  .addWithInfo('Sizes', '', () => (
-    <div>
-      <Spinner size="extra-small" />
-      <Spinner size="small" />
-      <Spinner size="regular" />
-      <Spinner size="large" />
-    </div>
-  ), { inline: true })
+storiesOf("Spinner", module).add("Basic", () => <Spinner />).add("Sizes", () =>
+  <div>
+    <Spinner size="extra-small" />
+    <Spinner size="small" />
+    <Spinner size="regular" />
+    <Spinner size="large" />
+  </div>
+)

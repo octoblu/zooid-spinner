@@ -1,29 +1,35 @@
-import classNames from 'classnames'
-import React from 'react'
-import PropTypes from 'prop-types'
-import styles from './styles.css'
+import indexOf from "lodash/indexOf"
+import keys from "lodash/keys"
+import PropTypes from "prop-types"
+import React from "react"
+
+import { SIZES } from "./helpers"
+import SpinnerCircle from "./SpinnerCircle"
+import SpinnerContainer from "./SpinnerContainer"
+import SpinnerSegment from "./SpinnerSegment"
+
+const SPINNER_SIZES = keys(SIZES)
 
 const propTypes = {
-  className: PropTypes.string,
-  size: PropTypes.oneOf(['regular', 'extra-small', 'small', 'large']),
+  size: PropTypes.oneOf(SPINNER_SIZES),
 }
 
 const defaultProps = {
-  size: 'regular',
+  size: "regular",
 }
 
-const Spinner = ({ className, size }) => {
-  const classes = classNames(styles[size], className)
+const Spinner = ({ size }) => {
+  if (indexOf(SPINNER_SIZES, size) < 0) return null
 
   return (
-    <div className={classes}>
-      <i className={styles.circle} />
-      <i className={styles.segment} />
-    </div>
+    <SpinnerContainer size={size}>
+      <SpinnerCircle />
+      <SpinnerSegment />
+    </SpinnerContainer>
   )
 }
 
-Spinner.propTypes    = propTypes
+Spinner.propTypes = propTypes
 Spinner.defaultProps = defaultProps
 
 export default Spinner

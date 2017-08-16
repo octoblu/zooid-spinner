@@ -1,50 +1,45 @@
-var path              = require('path');
-var webpack           = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var path = require("path")
+var webpack = require("webpack")
+var UglifyJSPlugin = require("uglifyjs-webpack-plugin")
 
 var plugins = [
-  // new ExtractTextPlugin('bundle.css', { allChunks: true }),
   new webpack.NoEmitOnErrorsPlugin(),
   new webpack.DefinePlugin({
-    'process.env': {
-      'NODE_ENV': JSON.stringify('production')
-    }
-  })
+    "process.env": {
+      NODE_ENV: JSON.stringify("production"),
+    },
+  }),
+  new UglifyJSPlugin(),
 ]
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: "source-map",
   resolve: {
-    extensions: ['.js']
+    extensions: [".js"],
   },
-  entry: [ './src/index' ],
+  entry: ["./src/index"],
   output: {
-    filename: 'bundle.js',
-    path: path.join(__dirname, 'dist'),
-    libraryTarget: 'umd',
-    library: 'Spinner'
+    filename: "bundle.js",
+    path: path.join(__dirname, "dist"),
+    libraryTarget: "umd",
+    library: "Spinner",
   },
   externals: {
-   react: {
-     root: 'React',
-     commonjs2: 'react',
-     commonjs: 'react',
-     amd: 'react'
-   }
+    react: {
+      root: "React",
+      commonjs2: "react",
+      commonjs: "react",
+      amd: "react",
+    },
   },
   plugins: plugins,
   module: {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['babel-loader'],
-        include: /src/
+        loaders: ["babel-loader"],
+        include: /src/,
       },
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-        exclude: /node_modules/
-      }
-    ]
-  }
-};
+    ],
+  },
+}
