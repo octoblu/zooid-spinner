@@ -84,7 +84,6 @@
     "mocha-osx-reporter": "^0.1.2",
     "nyc": "^10.2.0",
     "react-addons-test-utils": "^15.6.0",
-    "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
     "rimraf": "^2.6.1",
     "sinon": "^2.1.0",
@@ -99,6 +98,7 @@
     "@storybook/react": "^3.2.4",
     "emotion": "^7.0.13",
     "prop-types": "^15.5.10",
-    "react": "^15.6.1"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }
